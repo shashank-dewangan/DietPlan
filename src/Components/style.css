@@ -5,16 +5,16 @@
 img {
   border: 1px solid #ddd;
   border-radius: 4px;
+  width:300px;
+  height: 300px;
   padding: 5px;
-  width: 400px;
-  height: 400px;
   margin: 0%;
 }
 .sup-container{
-  width:400px;
   margin: 0%;
+  padding-left: 10px;
+  padding-right: 10px;
 }
-
 .product-available {
   background-color: lightgreen;
   border: 1px solid green;
@@ -23,7 +23,7 @@ img {
   width: 240px;
 }
 .product-not-available {
-  /*background-color: rgb(252, 111, 132);*/
+  background-color: rgb(252, 111, 132);
   border: 1px solid red;
   border-left: 10px solid red;
   padding: 10px;

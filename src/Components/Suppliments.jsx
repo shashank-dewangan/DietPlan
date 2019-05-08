@@ -3,7 +3,7 @@ import AliceCarousel from "react-alice-carousel";
 import SuppItem from "./SuppItem";
 import "react-alice-carousel/lib/alice-carousel.css";
 import "./style.css";
-import { IoIosArrowDropleft,IoIosArrowDropright } from "react-icons/io";
+import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
 
 class Suppliments extends React.Component {
   items = [
@@ -67,14 +67,24 @@ class Suppliments extends React.Component {
   }
 
   render() {
-    setTimeout(() => { window.dispatchEvent(new Event('resize')) }, 200);
+    setTimeout(() => {
+      window.dispatchEvent(new Event("resize"));
+    }, 200);
     const { galleryItems, responsive, currentIndex } = this.state;
 
     return (
-      <div>
-        <div style={{ width: "100%" }}>
-          <div style={{ float: "left", width: "5%",  lineHeight:"30" }} onClick={() => this.slidePrev()}> <IoIosArrowDropleft style={{width:'30px', height:'30px', color:'gray'}}/></div>
-          <div style={{ float: "left", width: "90%",  }}><AliceCarousel
+      <div style={{ width: "100%" }}>
+      <br/>
+        <div
+          style={{ float: "left", width: "5%", lineHeight: "20" }}
+          onClick={() => this.slidePrev()}
+        >
+          <IoIosArrowDropleft
+            style={{ width: "30px", height: "30px", color: "gray" }}
+          />
+        </div>
+        <div style={{ float: "left", width: "90%" }}>
+          <AliceCarousel
             dotsDisabled={true}
             buttonsDisabled={true}
             items={galleryItems}
@@ -83,16 +93,22 @@ class Suppliments extends React.Component {
             slideToIndex={currentIndex}
             onSlideChanged={this.onSlideChanged}
             autoPlayInterval={2000}
-            autoPlayDirection="ltr"
-            autoPlay={true}
+            autoPlayDirection="rtl"
+            autoPlay={false}
             fadeOutAnimation={true}
             disableAutoPlayOnAction={true}
           />
 
-          {this.items.map(this.thumbItem)}</div>
-          <div style={{ float: "left", width: "5%",  lineHeight:"30"}} onClick={() => this.slideNext()}> <IoIosArrowDropright style={{width:'30px', height:'30px', color:'gray'}} /></div>
+         
         </div>
-        
+        <div
+          style={{ float: "left", width: "5%", lineHeight: "20" }}
+          onClick={() => this.slideNext()}
+        >
+          <IoIosArrowDropright
+            style={{ width: "30px", height: "30px", color: "gray" }}
+          />
+        </div>
       </div>
     );
   }
