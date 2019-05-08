@@ -10,36 +10,43 @@ class Suppliments extends React.Component {
     {
       //src: "http://lorempixel.com/output/cats-q-c-640-480-1.jpg",
       src: require("./assets/1.jpeg"),
-      name: "Supp 1"
+      name: "Supp 1",
+      href:"/Data"
     },
     {
       src: require("./assets/2.jpeg"),
-      name: "Supp 2"
+      name: "Supp 2",
+      href:"/Data"
     },
     {
       src: require("./assets/3.jpeg"),
-      name: "Supp 3"
+      name: "Supp 3",
+      href:"/Data"
     },
     {
       src: require("./assets/4.jpeg"),
-      name: "Supp 4"
+      name: "Supp 4",
+      href:"/Data"
     },
     {
       src: require("./assets/5.jpeg"),
-      name: "Supp 5"
+      name: "Supp 5",
+      href:"/Data"
     },
     {
       src: require("./assets/6.jpeg"),
-      name: "Supp 6"
+      name: "Supp 6",
+      href:"/Data"
     },
     {
       src: require("./assets/7.jpeg"),
-      name: "Supp 7"
+      name: "Supp 7",
+      href:"/Data"
     }
   ];
   state = {
     currentIndex: 0,
-    responsive: { 1024: { items: 3 } },
+    responsive: { 1024: { items: 4 } },
     galleryItems: this.galleryItems()
   };
 
@@ -62,6 +69,7 @@ class Suppliments extends React.Component {
         src={item.src}
         name={item.name}
         onDragStart={this.handleOnDragStart}
+        href={item.href}
       />
     ));
   }
@@ -77,7 +85,7 @@ class Suppliments extends React.Component {
       <br/>
         <div
           style={{ float: "left", width: "5%", lineHeight: "20" }}
-          onClick={() => this.slidePrev()}
+          onClick={() => this.slidePrev()}          
         >
           <IoIosArrowDropleft
             style={{ width: "30px", height: "30px", color: "gray" }}
