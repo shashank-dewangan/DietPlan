@@ -5,7 +5,7 @@ const PageHeader =()=> (
     <div className="row">
       <div className="column">
         <div className="ui message">
-          <h1 className="ui header">Page Header</h1>
+          <h1 className="ui header page-header">Page Header</h1>
         </div>
       </div>
     </div>

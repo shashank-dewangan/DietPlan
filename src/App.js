@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import { Products, PageHeader,Data } from "./Components";
+import { Products, PageHeader,Data,Suppliments } from "./Components";
 
 import { Router, Switch, Route } from "react-router-dom";
 import { createBrowserHistory } from "history";
+import './styles.css'
 const history = createBrowserHistory();
 
 class App extends Component {
@@ -14,6 +15,8 @@ class App extends Component {
           <Switch>
             <Route exact path={`/products`} component={Products} />
             <Route exact path={`/data`} component={Data} />
+            <Route exact path={`/suppliments`} component={Suppliments} />
+            Suppliments
           </Switch>
         </Router>
       </div>
